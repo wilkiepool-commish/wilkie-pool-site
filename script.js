@@ -44,84 +44,73 @@ const survivorSection = document.querySelector(".survivor-section");
 const survivorControls = document.getElementById("survivorControls");
 const survivorStatusBadge = document.getElementById("survivorStatusBadge");
 const survivorStateMessage = document.getElementById("survivorStateMessage");
-const toggleSurvivorForm = document.getElementById("toggleSurvivorForm");
-const survivorForm = document.getElementById("survivorForm");
 const survivorQuickOpen = document.getElementById("survivorQuickOpen");
+const survivorCardBadge = document.getElementById("survivorCardBadge");
+const survivorCardText = document.getElementById("survivorCardText");
 
-if (survivorSection && survivorControls && survivorStatusBadge && survivorStateMessage) {
-  const survivorStatus = survivorSection.dataset.survivorStatus || "pending";
+function applySurvivorStatus(status) {
+  if (!survivorControls || !survivorStatusBadge || !survivorStateMessage) return;
 
-  if (survivorStatus === "open") {
+  if (status === "open") {
     survivorStatusBadge.textContent = "Open Now";
     survivorStatusBadge.className = "badge badge-open";
     survivorStateMessage.textContent =
       "Submit your Survivor pick before the first game tips off today.";
     survivorControls.classList.remove("hidden");
-  } else if (survivorStatus === "closed") {
+
+    if (survivorCardBadge) {
+      survivorCardBadge.textContent = "Open Now";
+      survivorCardBadge.className = "status-badge available";
+    }
+
+    if (survivorCardText) {
+      survivorCardText.textContent =
+        "Submission is live. Jump to the Survivor section and submit your pick.";
+    }
+  } else if (status === "closed") {
     survivorStatusBadge.textContent = "Closed for Today";
     survivorStatusBadge.className = "badge badge-closed";
     survivorStateMessage.textContent =
       "Today’s submission window has ended. Picks are now locked.";
     survivorControls.classList.add("hidden");
+
+    if (survivorCardBadge) {
+      survivorCardBadge.textContent = "Closed";
+      survivorCardBadge.className = "status-badge closed";
+    }
+
+    if (survivorCardText) {
+      survivorCardText.textContent =
+        "Today’s Survivor submission window has ended. View rules and status here.";
+    }
   } else {
     survivorStatusBadge.textContent = "Opens Soon";
     survivorStatusBadge.className = "badge badge-pending";
     survivorStateMessage.textContent =
       "Today’s Survivor submission window is not open yet. Check back before tip-off.";
     survivorControls.classList.add("hidden");
+
+    if (survivorCardBadge) {
+      survivorCardBadge.textContent = "Opens Soon";
+      survivorCardBadge.className = "status-badge pending";
+    }
+
+    if (survivorCardText) {
+      survivorCardText.textContent =
+        "Submission is not open yet. View contest details and check back later.";
+    }
   }
 }
 
-if (toggleSurvivorForm && survivorForm) {
-  toggleSurvivorForm.addEventListener("click", () => {
-    survivorForm.classList.toggle("hidden");
-
-    if (survivorForm.classList.contains("hidden")) {
-      toggleSurvivorForm.textContent = "Open Survivor Submission";
-    } else {
-      toggleSurvivorForm.textContent = "Hide Survivor Submission";
-    }
-  });
+if (survivorSection) {
+  const survivorStatus = (survivorSection.dataset.survivorStatus || "pending").trim().toLowerCase();
+  applySurvivorStatus(survivorStatus);
 }
 
-if (survivorQuickOpen && survivorSection && toggleSurvivorForm && survivorForm) {
+if (survivorQuickOpen && survivorSection) {
   survivorQuickOpen.addEventListener("click", () => {
-    const survivorStatus = survivorSection.dataset.survivorStatus || "pending";
-
-    if (survivorStatus === "open") {
-      setTimeout(() => {
-        survivorForm.classList.remove("hidden");
-        toggleSurvivorForm.textContent = "Hide Survivor Submission";
-      }, 150);
-    }
+    setTimeout(() => {
+      survivorSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   });
 }
-
-// Auto-update "Last Updated" timestamp from latest GitHub commit
-
-async function updateLastCommitTime() {
-  try {
-    const response = await fetch(
-      "https://api.github.com/repos/wilkiepool-commish/wilkie-pool-site/commits?per_page=1"
-    );
-
-    const data = await response.json();
-
-    const commitDate = new Date(data[0].commit.committer.date);
-
-    const formatted = commitDate.toLocaleString("en-US", {
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "2-digit"
-    });
-
-    const el = document.getElementById("lastUpdated");
-    if (el) el.textContent = formatted;
-
-  } catch (err) {
-    console.log("Could not fetch commit time", err);
-  }
-}
-
-updateLastCommitTime();
