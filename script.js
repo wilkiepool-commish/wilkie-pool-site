@@ -1,4 +1,3 @@
-
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxClose = document.getElementById("lightboxClose");
@@ -40,3 +39,47 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+// Survivor manual open/close logic
+const survivorSection = document.querySelector(".survivor-section");
+const survivorControls = document.getElementById("survivorControls");
+const survivorStatusBadge = document.getElementById("survivorStatusBadge");
+const survivorStateMessage = document.getElementById("survivorStateMessage");
+const toggleSurvivorForm = document.getElementById("toggleSurvivorForm");
+const survivorForm = document.getElementById("survivorForm");
+
+if (survivorSection && survivorControls && survivorStatusBadge && survivorStateMessage) {
+  const survivorStatus = survivorSection.dataset.survivorStatus || "pending";
+
+  if (survivorStatus === "open") {
+    survivorStatusBadge.textContent = "Open Now";
+    survivorStatusBadge.className = "badge badge-open";
+    survivorStateMessage.textContent =
+      "Submit your Survivor pick before the first game tips off today.";
+    survivorControls.classList.remove("hidden");
+  } else if (survivorStatus === "closed") {
+    survivorStatusBadge.textContent = "Closed for Today";
+    survivorStatusBadge.className = "badge badge-closed";
+    survivorStateMessage.textContent =
+      "Today’s submission window has ended. Picks are now locked.";
+    survivorControls.classList.add("hidden");
+  } else {
+    survivorStatusBadge.textContent = "Opens Soon";
+    survivorStatusBadge.className = "badge badge-pending";
+    survivorStateMessage.textContent =
+      "Today’s Survivor submission window is not open yet. Check back before tip-off.";
+    survivorControls.classList.add("hidden");
+  }
+}
+
+if (toggleSurvivorForm && survivorForm) {
+  toggleSurvivorForm.addEventListener("click", () => {
+    survivorForm.classList.toggle("hidden");
+
+    if (survivorForm.classList.contains("hidden")) {
+      toggleSurvivorForm.textContent = "Open Survivor Submission";
+    } else {
+      toggleSurvivorForm.textContent = "Hide Survivor Submission";
+    }
+  });
+}
