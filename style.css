@@ -652,3 +652,7 @@ button {
   font-size: 1.25rem;
   color: #fff;
 }
+
+.site-header {
+  background: linear-gradient(135deg, #0f2747, #18365f);
+}
