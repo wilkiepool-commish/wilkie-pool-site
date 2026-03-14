@@ -51,10 +51,13 @@
         </div>
 
         <div class="actions-grid secondary-actions">
-          <!-- PICK 6 STATUS:
-               available | pending | closed
-               Update the class and badge text manually as needed.
-          -->
+  <!-- 
+  
+  PICK 6 STATUS:
+  available | pending | closed
+  Update the class and badge text manually as needed.
+          
+  -->
           <a
             class="action-card pick6-card pending"
             href="#"
@@ -93,18 +96,22 @@
             <span class="badge">Announcements</span>
           </div>
           <ul class="announcement-list">
-            <li>Entry deadline: Thursday at 6:00 PM</li>
-            <li>Payment & first pick must be received before first tip</li>
-            <li>Daily Survivor rules and deadlines posted here</li>
+            <li>Entry deadline: Thursday at 12:00 PM</li>
+            <li>Payment must be received before first tip</li>
+            <li>Survivor contest rules and deadlines posted here:</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- SURVIVOR STATUS:
-         open | closed | pending
-         Change data-survivor-status manually in GitHub as needed.
+    <!-- 
+    
+    SURVIVOR STATUS:
+    open | closed | pending
+    Change data-survivor-status manually in GitHub as needed.
+    
     -->
+    
     <section
       class="survivor-section"
       id="survivor-section"
@@ -118,25 +125,25 @@
           </div>
 
           <p class="survivor-summary">
-            All Survivor Challengers can submit their daily Survivor pick using this entry form before tip off each day of play.
+            All Survivor Challengers can submit their Survivor pick using this entry form before tip off each day of play.
           </p>
 
           <div class="survivor-rules">
             <p><strong>Survivor Challenge Rules:</strong></p>
             <ul>
               <li>Up to two entries max per member.</li>
-              <li>Pick <strong>ONE team each DAY</strong> of the tournament.</li>
-              <li>Only teams playing <strong>THAT DAY</strong> can be picked.</li>
-              <li>Once a team has been picked, it <strong>CANNOT</strong> be picked again.</li>
+              <li>Pick <strong>One team each day</strong> of tournament play.</li>
+              <li>Only teams playing <strong>that day</strong> can be picked.</li>
+              <li>Once a team has been picked, it <strong>cannot</strong> be picked again.</li>
               <li>Daily deadline is <strong>tip-off of the first game</strong> that day.</li>
               <li>No pick = immediate loss.</li>
               <li>If your team wins, you advance. If not, you are eliminated.</li>
-              <li>Tiebreaker: total seed points across picks days 1–10, higher wins.</li>
+              <li>Tiebreaker: total seed points across picks days 1–10.</li>
             </ul>
           </div>
 
           <div class="survivor-state-message" id="survivorStateMessage">
-            Today’s Survivor submission window is not open yet. Check back before tip-off.
+            Today’s Survivor submission window is not open yet. Check back before tip-off, or submit via email.
           </div>
 
           <div class="survivor-controls" id="survivorControls">
@@ -153,13 +160,6 @@
               id="survivorForm"
               name="survivor-submission"
               method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="survivor-submission" />
-              <p class="hidden-honeypot">
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-              </p>
 
               <div class="form-grid">
                 <div class="form-field">
