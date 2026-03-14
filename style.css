@@ -1,6 +1,6 @@
 
 :root {
-  --bg: #f5f7fb;
+  --bg: #eef6ff;
   --surface: #ffffff;
   --surface-alt: #eef2f8;
   --text: #122033;
@@ -27,10 +27,11 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
+  background: #eef6ff;
   color: var(--text);
   line-height: 1.5;
 }
+
 
 img {
   max-width: 100%;
@@ -753,14 +754,20 @@ button {
   border-color: #ffffff;
 }
 
-.hero-logo-wrap {
-  margin-bottom: 10px;
+.hero-banner-wrap {
+  margin-bottom: 16px;
 }
 
-.hero-logo {
-  height: 70px;
-  width: auto;
+.hero-banner {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 16px 36px rgba(15, 39, 71, 0.18);
+  border: 1px solid rgba(15, 39, 71, 0.08);
 }
+
 
 @media (max-width: 699px) {
   .premium-header-inner {
@@ -800,9 +807,9 @@ button {
     font-size: 0.88rem;
   }
 
-  .hero-logo {
-    height: 58px;
-  }
+  .hero-banner {
+  border-radius: 16px;
+}
 }
 
 
