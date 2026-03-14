@@ -808,10 +808,15 @@ button {
     padding: 0 10px;
     font-size: 0.88rem;
   }
+}
 
+@media (max-width: 699px) {
   .hero-banner {
-  border-radius: 16px;
+    height: 150px;
+    border-radius: 16px;
+    object-position: center 35%;
+  }
 }
-}
+
 
 
