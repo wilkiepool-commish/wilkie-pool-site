@@ -807,9 +807,9 @@ button {
     font-size: 0.88rem;
   }
 
-  .hero-logo {
-    height: 58px;
-  }
+  .hero-banner {
+  border-radius: 16px;
+}
 }
 
 
