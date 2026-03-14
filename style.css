@@ -1,1 +1,379 @@
 
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-alt: #eef2f8;
+  --text: #122033;
+  --muted: #5c6b80;
+  --navy: #0f2747;
+  --navy-2: #18365f;
+  --accent: #f0a53a;
+  --accent-dark: #d58a20;
+  --border: #dbe3ef;
+  --shadow: 0 10px 30px rgba(15, 39, 71, 0.10);
+  --radius: 20px;
+  --radius-sm: 14px;
+  --container: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(15, 39, 71, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: rgba(255,255,255,0.86);
+  font-size: 0.95rem;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: #fff;
+}
+
+.compact-hero,
+.page-intro,
+.announcements-section,
+.survivor-section,
+.standings-preview-section,
+.how-it-works-section,
+.standings-page-section {
+  padding: 22px 0;
+}
+
+.hero h1,
+.page-intro h1 {
+  margin: 6px 0 10px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.05;
+  color: var(--navy);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0 0 22px;
+  color: var(--muted);
+  max-width: 680px;
+}
+
+.actions-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.primary-actions {
+  grid-template-columns: 1fr;
+  margin-bottom: 14px;
+}
+
+.secondary-actions {
+  grid-template-columns: 1fr;
+}
+
+.action-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-2px);
+}
+
+.action-card.primary {
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+  color: #fff;
+  border-color: transparent;
+}
+
+.action-title {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.action-text {
+  display: block;
+  color: inherit;
+  opacity: 0.86;
+  font-size: 0.95rem;
+}
+
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.section-heading h2,
+.preview-card h3,
+.info-card h3 {
+  margin: 0;
+  color: var(--navy);
+}
+
+.badge {
+  background: var(--surface-alt);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.announcement-card {
+  border-left: 6px solid var(--accent);
+}
+
+.announcement-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.announcement-list li + li {
+  margin-top: 8px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 0 18px;
+  font-weight: 700;
+}
+
+.button-accent {
+  background: var(--accent);
+  color: var(--navy);
+  margin-top: 8px;
+}
+
+.preview-grid,
+.info-grid,
+.standings-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.preview-card img,
+.standings-card img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.image-button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.small-note {
+  margin: 10px 0 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.text-link {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.site-footer {
+  padding: 28px 0 90px;
+}
+
+.footer-inner {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.mobile-quickbar {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  width: min(420px, calc(100% - 20px));
+  background: rgba(15, 39, 71, 0.96);
+  border-radius: 999px;
+  box-shadow: 0 14px 36px rgba(15, 39, 71, 0.28);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  z-index: 50;
+}
+
+.mobile-quickbar a {
+  color: #fff;
+  text-align: center;
+  padding: 14px 8px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.mobile-quickbar a:last-child {
+  border-right: 0;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 15, 26, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: min(100%, 1000px);
+  max-height: 85vh;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .primary-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .secondary-actions,
+  .preview-grid,
+  .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .standings-stack {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .compact-hero,
+  .page-intro,
+  .announcements-section,
+  .survivor-section,
+  .standings-preview-section,
+  .how-it-works-section,
+  .standings-page-section {
+    padding: 28px 0;
+  }
+}
+
+@media (min-width: 901px) {
+  .mobile-quickbar {
+    display: none;
+  }
+
+  .site-footer {
+    padding-bottom: 36px;
+  }
+}
