@@ -524,3 +524,14 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.survivor-form-panel {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.survivor-form-note {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
