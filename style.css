@@ -535,3 +535,274 @@ button {
   margin: 0 0 14px;
   color: var(--muted);
 }
+
+/* Match spacing with other main sections */
+.compact-hero,
+.page-intro,
+.announcements-section,
+.survivor-section,
+.sweet16-section,
+.standings-preview-section,
+.how-it-works-section,
+.standings-page-section {
+  padding: 22px 0;
+}
+
+@media (min-width: 900px) {
+  .compact-hero,
+  .page-intro,
+  .announcements-section,
+  .survivor-section,
+  .sweet16-section,
+  .standings-preview-section,
+  .how-it-works-section,
+  .standings-page-section {
+    padding: 28px 0;
+  }
+}
+
+/* Larger embedded standings presentation */
+.standings-stack {
+  max-width: 1320px;
+  margin: 0 auto;
+  gap: 22px;
+}
+
+.standings-card {
+  padding: 22px;
+}
+
+.standings-card .image-button {
+  display: block;
+  width: 100%;
+}
+
+.standings-card img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+/* Larger lightbox for both Home + Standings */
+.lightbox {
+  background: rgba(8, 15, 26, 0.94);
+  padding: 14px;
+}
+
+.lightbox img {
+  width: auto;
+  height: auto;
+  max-width: 96vw;
+  max-height: 94vh;
+  object-fit: contain;
+  background: #fff;
+}
+
+.lightbox-close {
+  top: 10px;
+  right: 16px;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+@media (min-width: 900px) {
+  .standings-card {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 699px) {
+  .standings-stack {
+    gap: 18px;
+  }
+
+  .standings-card {
+    padding: 16px;
+  }
+
+  .lightbox {
+    padding: 8px;
+  }
+
+  .lightbox img {
+    max-width: 98vw;
+    max-height: 92vh;
+    border-radius: 10px;
+  }
+}
+/* Header Brand Upgrade */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-logo {
+  height: 34px;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.site-header {
+  background: linear-gradient(135deg, #0f2747, #18365f);
+}
+
+/* Hero Logo */
+
+.hero-logo-wrap {
+  margin-bottom: 10px;
+}
+
+.hero-logo {
+  height: 70px;
+  width: auto;
+}
+
+/* Premium Header Redesign */
+
+.site-header-premium {
+  background: linear-gradient(135deg, #0f2747 0%, #18365f 55%, #214573 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 24px rgba(15, 39, 71, 0.18);
+}
+
+.premium-header-inner {
+  min-height: 82px;
+  gap: 18px;
+}
+
+.brand-premium {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  font-size: 1.28rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.brand-subtext {
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.site-nav-premium {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.site-nav-premium a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.site-nav-premium a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.site-nav-premium a.active {
+  background: #ffffff;
+  color: #0f2747;
+  border-color: #ffffff;
+}
+
+.hero-logo-wrap {
+  margin-bottom: 10px;
+}
+
+.hero-logo {
+  height: 70px;
+  width: auto;
+}
+
+@media (max-width: 699px) {
+  .premium-header-inner {
+    min-height: auto;
+    padding: 12px 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brand-premium {
+    justify-content: flex-start;
+  }
+
+  .brand-logo {
+    height: 38px;
+  }
+
+  .brand-text {
+    font-size: 1.14rem;
+  }
+
+  .brand-subtext {
+    font-size: 0.72rem;
+  }
+
+  .site-nav-premium {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+  .site-nav-premium a {
+    width: 100%;
+    min-height: 40px;
+    padding: 0 10px;
+    font-size: 0.88rem;
+  }
+
+  .hero-logo {
+    height: 58px;
+  }
+}
+
+

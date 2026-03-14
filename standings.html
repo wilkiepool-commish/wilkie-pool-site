@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">Wilkie Pool</a>
-      <nav class="site-nav">
+  <header class="site-header site-header-premium">
+    <div class="container header-inner premium-header-inner">
+      <a href="index.html" class="brand brand-premium">
+        <img src="assets/logo/wilkie-logo.png" alt="Wilkie Pool Logo" class="brand-logo" />
+        <span class="brand-copy">
+          <span class="brand-text">Wilkie Pool</span>
+          <span class="brand-subtext">March Madness Club Hub</span>
+        </span>
+      </a>
+
+      <nav class="site-nav site-nav-premium">
         <a href="index.html">Home</a>
         <a href="standings.html" class="active">Standings</a>
         <a href="mailto:wilkiepool@gmail.com">Contact</a>
@@ -24,9 +30,7 @@
       <div class="container">
         <p class="eyebrow">Standings Board</p>
         <h1>Live Standings</h1>
-        <p class="subtitle">
-  Last Updated: <strong id="lastUpdated">Loading…</strong>
-</p>
+        <p class="subtitle">Tracked side contest standings are shown below.</p>
       </div>
     </section>
 
@@ -34,33 +38,33 @@
       <div class="container standings-stack">
         <article class="section-card standings-card">
           <div class="section-heading">
-            <h2>Main Contest</h2>
-            <span class="badge">Bracket</span>
-          </div>
-          <button class="image-button" data-full="assets/standings/main.png" data-alt="Main Contest Standings">
-            <img src="assets/standings/main.png" alt="Main Contest Standings" />
-          </button>
-          <p class="small-note">Tap to enlarge</p>
-        </article>
-
-        <article class="section-card standings-card">
-          <div class="section-heading">
-            <h2>Pick 6 Contest</h2>
+            <h2>Pick 6</h2>
             <span class="badge">Pick 6</span>
           </div>
-          <button class="image-button" data-full="assets/standings/pick6.png" data-alt="Pick 6 Contest Standings">
-            <img src="assets/standings/pick6.png" alt="Pick 6 Contest Standings" />
+          <button class="image-button" data-full="assets/standings/pick6.png" data-alt="Pick 6 Standings">
+            <img src="assets/standings/pick6.png" alt="Pick 6 Standings" />
           </button>
           <p class="small-note">Tap to enlarge</p>
         </article>
 
         <article class="section-card standings-card">
           <div class="section-heading">
-            <h2>Daily Survivor Contest</h2>
+            <h2>Survivor</h2>
             <span class="badge">Survivor</span>
           </div>
-          <button class="image-button" data-full="assets/standings/survivor.png" data-alt="Daily Survivor Standings">
-            <img src="assets/standings/survivor.png" alt="Daily Survivor Standings" />
+          <button class="image-button" data-full="assets/standings/survivor.png" data-alt="Survivor Standings">
+            <img src="assets/standings/survivor.png" alt="Survivor Standings" />
+          </button>
+          <p class="small-note">Tap to enlarge</p>
+        </article>
+
+        <article class="section-card standings-card">
+          <div class="section-heading">
+            <h2>Sweet 16 Reset</h2>
+            <span class="badge">Sweet 16</span>
+          </div>
+          <button class="image-button" data-full="assets/standings/sweet16reset.png" data-alt="Sweet 16 Reset Standings">
+            <img src="assets/standings/sweet16reset.png" alt="Sweet 16 Reset Standings" />
           </button>
           <p class="small-note">Tap to enlarge</p>
         </article>
@@ -75,8 +79,12 @@
   </footer>
 
   <div class="mobile-quickbar">
-    <a href="#" target="_blank" rel="noopener">Join</a>
-    <a href="#" target="_blank" rel="noopener">Pay</a>
+    <a
+      href="https://picks.cbssports.com/college-basketball/ncaa-tournament/bracket/pools/kbxw63b2ge2dgnrsge2ds===/join?invited-by=ivxhi4tzhizdembqgmzdsmzv&via-medium=copy&ttag=FF26_cpy_invite_new_mt_bpm&pool-join-key=wwiclvk2iwew225c&senderRole=m1afn9asgye9rw"
+      target="_blank"
+      rel="noopener"
+    >Join</a>
+    <a href="https://paypal.me/wilkiepool" target="_blank" rel="noopener">Pay</a>
     <a href="standings.html">Standings</a>
   </div>
 
