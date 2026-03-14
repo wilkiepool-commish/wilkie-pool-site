@@ -83,3 +83,18 @@ if (toggleSurvivorForm && survivorForm) {
     }
   });
 }
+
+const survivorQuickOpen = document.getElementById("survivorQuickOpen");
+
+if (survivorQuickOpen && survivorSection && toggleSurvivorForm && survivorForm) {
+  survivorQuickOpen.addEventListener("click", () => {
+    const survivorStatus = survivorSection.dataset.survivorStatus || "pending";
+
+    if (survivorStatus === "open") {
+      setTimeout(() => {
+        survivorForm.classList.remove("hidden");
+        toggleSurvivorForm.textContent = "Hide Survivor Submission";
+      }, 150);
+    }
+  });
+}
