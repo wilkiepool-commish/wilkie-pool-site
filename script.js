@@ -48,10 +48,10 @@ const survivorQuickOpen = document.getElementById("survivorQuickOpen");
 const survivorCardBadge = document.getElementById("survivorCardBadge");
 const survivorCardText = document.getElementById("survivorCardText");
 
-if (survivorSection && survivorControls && survivorStatusBadge && survivorStateMessage) {
-  const survivorStatus = survivorSection.dataset.survivorStatus || "pending";
+function applySurvivorStatus(status) {
+  if (!survivorControls || !survivorStatusBadge || !survivorStateMessage) return;
 
-  if (survivorStatus === "open") {
+  if (status === "open") {
     survivorStatusBadge.textContent = "Open Now";
     survivorStatusBadge.className = "badge badge-open";
     survivorStateMessage.textContent =
@@ -64,9 +64,10 @@ if (survivorSection && survivorControls && survivorStatusBadge && survivorStateM
     }
 
     if (survivorCardText) {
-      survivorCardText.textContent = "Submission is live. Jump to the Survivor section and submit your pick.";
+      survivorCardText.textContent =
+        "Submission is live. Jump to the Survivor section and submit your pick.";
     }
-  } else if (survivorStatus === "closed") {
+  } else if (status === "closed") {
     survivorStatusBadge.textContent = "Closed for Today";
     survivorStatusBadge.className = "badge badge-closed";
     survivorStateMessage.textContent =
@@ -79,7 +80,8 @@ if (survivorSection && survivorControls && survivorStatusBadge && survivorStateM
     }
 
     if (survivorCardText) {
-      survivorCardText.textContent = "Today’s Survivor submission window has ended. View rules and status here.";
+      survivorCardText.textContent =
+        "Today’s Survivor submission window has ended. View rules and status here.";
     }
   } else {
     survivorStatusBadge.textContent = "Opens Soon";
@@ -94,9 +96,15 @@ if (survivorSection && survivorControls && survivorStatusBadge && survivorStateM
     }
 
     if (survivorCardText) {
-      survivorCardText.textContent = "Submission is not open yet. View contest details and check back later.";
+      survivorCardText.textContent =
+        "Submission is not open yet. View contest details and check back later.";
     }
   }
+}
+
+if (survivorSection) {
+  const survivorStatus = (survivorSection.dataset.survivorStatus || "pending").trim().toLowerCase();
+  applySurvivorStatus(survivorStatus);
 }
 
 if (survivorQuickOpen && survivorSection) {
