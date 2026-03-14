@@ -40,13 +40,13 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// Survivor manual open/close logic
 const survivorSection = document.querySelector(".survivor-section");
 const survivorControls = document.getElementById("survivorControls");
 const survivorStatusBadge = document.getElementById("survivorStatusBadge");
 const survivorStateMessage = document.getElementById("survivorStateMessage");
 const toggleSurvivorForm = document.getElementById("toggleSurvivorForm");
 const survivorForm = document.getElementById("survivorForm");
+const survivorQuickOpen = document.getElementById("survivorQuickOpen");
 
 if (survivorSection && survivorControls && survivorStatusBadge && survivorStateMessage) {
   const survivorStatus = survivorSection.dataset.survivorStatus || "pending";
@@ -83,8 +83,6 @@ if (toggleSurvivorForm && survivorForm) {
     }
   });
 }
-
-const survivorQuickOpen = document.getElementById("survivorQuickOpen");
 
 if (survivorQuickOpen && survivorSection && toggleSurvivorForm && survivorForm) {
   survivorQuickOpen.addEventListener("click", () => {
