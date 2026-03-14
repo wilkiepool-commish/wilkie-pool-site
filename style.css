@@ -754,14 +754,20 @@ button {
   border-color: #ffffff;
 }
 
-.hero-logo-wrap {
-  margin-bottom: 10px;
+.hero-banner-wrap {
+  margin-bottom: 16px;
 }
 
-.hero-logo {
-  height: 70px;
-  width: auto;
+.hero-banner {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 16px 36px rgba(15, 39, 71, 0.18);
+  border: 1px solid rgba(15, 39, 71, 0.08);
 }
+
 
 @media (max-width: 699px) {
   .premium-header-inner {
