@@ -377,3 +377,150 @@ button {
     padding-bottom: 36px;
   }
 }
+
+.action-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.status-badge.pending {
+  background: #fff3d9;
+  color: #8a5a00;
+}
+
+.status-badge.closed {
+  background: #fde2e2;
+  color: #8b1e1e;
+}
+
+.status-badge.available {
+  background: #dff6e8;
+  color: #12613a;
+}
+
+.pick6-card[aria-disabled="true"] {
+  cursor: default;
+}
+
+.pick6-card.pending,
+.pick6-card.closed {
+  opacity: 0.96;
+}
+
+.survivor-summary {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.survivor-rules p {
+  margin: 0 0 8px;
+}
+
+.survivor-rules ul {
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.survivor-rules li + li {
+  margin-top: 6px;
+}
+
+.survivor-state-message {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--surface-alt);
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.survivor-controls.hidden {
+  display: none;
+}
+
+.survivor-form {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.form-field input {
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+.form-field input:focus {
+  outline: 2px solid rgba(240, 165, 58, 0.25);
+  border-color: var(--accent);
+}
+
+.button-dark {
+  background: var(--navy);
+  color: #fff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hidden-honeypot {
+  display: none;
+}
+
+.badge-open {
+  background: #dff6e8;
+  color: #12613a;
+}
+
+.badge-closed {
+  background: #fde2e2;
+  color: #8b1e1e;
+}
+
+.badge-pending {
+  background: #fff3d9;
+  color: #8a5a00;
+}
+
+@media (min-width: 700px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
