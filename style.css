@@ -1,6 +1,6 @@
 
 :root {
-  --bg: #eef6ff;
+  --bg: linear-gradient(180deg, #eef6ff 0%, #f7fbff 100%);
   --surface: #ffffff;
   --surface-alt: #eef2f8;
   --text: #122033;
@@ -27,7 +27,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #eef6ff;
+  background: var(--bg);
   color: var(--text);
   line-height: 1.5;
 }
@@ -753,20 +753,22 @@ button {
   color: #0f2747;
   border-color: #ffffff;
 }
-
 .hero-banner-wrap {
   margin-bottom: 16px;
+  max-width: 980px;
 }
 
 .hero-banner {
   display: block;
   width: 100%;
-  max-width: 920px;
-  height: auto;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 38%;
   border-radius: 22px;
   box-shadow: 0 16px 36px rgba(15, 39, 71, 0.18);
   border: 1px solid rgba(15, 39, 71, 0.08);
 }
+
 
 
 @media (max-width: 699px) {
@@ -806,10 +808,15 @@ button {
     padding: 0 10px;
     font-size: 0.88rem;
   }
+}
 
+@media (max-width: 699px) {
   .hero-banner {
-  border-radius: 16px;
+    height: 150px;
+    border-radius: 16px;
+    object-position: center 35%;
+  }
 }
-}
+
 
 
