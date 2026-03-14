@@ -1,1 +1,88 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Standings | Wilkie March Madness Pool 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Wilkie Pool</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="standings.html" class="active">Standings</a>
+        <a href="mailto:wilkiepool@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <div class="container">
+        <p class="eyebrow">Standings Board</p>
+        <h1>Live Standings</h1>
+        <p class="subtitle">Last Updated: <strong>March 18, 10:00 PM</strong></p>
+      </div>
+    </section>
+
+    <section class="standings-page-section">
+      <div class="container standings-stack">
+        <article class="section-card standings-card">
+          <div class="section-heading">
+            <h2>Main Contest</h2>
+            <span class="badge">Bracket</span>
+          </div>
+          <button class="image-button" data-full="assets/standings/main.png" data-alt="Main Contest Standings">
+            <img src="assets/standings/main.png" alt="Main Contest Standings" />
+          </button>
+          <p class="small-note">Tap to enlarge</p>
+        </article>
+
+        <article class="section-card standings-card">
+          <div class="section-heading">
+            <h2>Pick 6 Contest</h2>
+            <span class="badge">Pick 6</span>
+          </div>
+          <button class="image-button" data-full="assets/standings/pick6.png" data-alt="Pick 6 Contest Standings">
+            <img src="assets/standings/pick6.png" alt="Pick 6 Contest Standings" />
+          </button>
+          <p class="small-note">Tap to enlarge</p>
+        </article>
+
+        <article class="section-card standings-card">
+          <div class="section-heading">
+            <h2>Daily Survivor Contest</h2>
+            <span class="badge">Survivor</span>
+          </div>
+          <button class="image-button" data-full="assets/standings/survivor.png" data-alt="Daily Survivor Standings">
+            <img src="assets/standings/survivor.png" alt="Daily Survivor Standings" />
+          </button>
+          <p class="small-note">Tap to enlarge</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Wilkie Pool • Contact: <a href="mailto:wilkiepool@gmail.com">wilkiepool@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <div class="mobile-quickbar">
+    <a href="#" target="_blank" rel="noopener">Join</a>
+    <a href="#" target="_blank" rel="noopener">Pay</a>
+    <a href="standings.html">Standings</a>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+    <img id="lightboxImage" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
