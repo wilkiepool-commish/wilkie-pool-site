@@ -96,32 +96,3 @@ if (survivorQuickOpen && survivorSection && toggleSurvivorForm && survivorForm) 
     }
   });
 }
-
-// Auto-update "Last Updated" timestamp from latest GitHub commit
-
-async function updateLastCommitTime() {
-  try {
-    const response = await fetch(
-      "https://api.github.com/repos/wilkiepool-commish/wilkie-pool-site/commits?per_page=1"
-    );
-
-    const data = await response.json();
-
-    const commitDate = new Date(data[0].commit.committer.date);
-
-    const formatted = commitDate.toLocaleString("en-US", {
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "2-digit"
-    });
-
-    const el = document.getElementById("lastUpdated");
-    if (el) el.textContent = formatted;
-
-  } catch (err) {
-    console.log("Could not fetch commit time", err);
-  }
-}
-
-updateLastCommitTime();
