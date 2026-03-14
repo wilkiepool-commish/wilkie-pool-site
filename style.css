@@ -656,3 +656,14 @@ button {
 .site-header {
   background: linear-gradient(135deg, #0f2747, #18365f);
 }
+
+/* Hero Logo */
+
+.hero-logo-wrap {
+  margin-bottom: 10px;
+}
+
+.hero-logo {
+  height: 70px;
+  width: auto;
+}
