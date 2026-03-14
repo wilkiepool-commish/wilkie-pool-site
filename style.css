@@ -753,20 +753,22 @@ button {
   color: #0f2747;
   border-color: #ffffff;
 }
-
 .hero-banner-wrap {
   margin-bottom: 16px;
+  max-width: 980px;
 }
 
 .hero-banner {
   display: block;
   width: 100%;
-  max-width: 920px;
-  height: auto;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 38%;
   border-radius: 22px;
   box-shadow: 0 16px 36px rgba(15, 39, 71, 0.18);
   border: 1px solid rgba(15, 39, 71, 0.08);
 }
+
 
 
 @media (max-width: 699px) {
