@@ -1,2 +1,12 @@
-# wilkie-pool-site
-Official website for the Wilkie March Madness Pool.  Mobile-first static site hosting announcements, contest links, and live standings snapshots for pool participants.
+# Wilkie Pool Site
+
+Official website for the Wilkie March Madness Pool.
+
+This site will be a mobile-first static website used for:
+- pool announcements
+- bracket and payment links
+- Daily Survivor access
+- live standings snapshots
+
+Primary contact:
+wilkiepool@gmail.com
