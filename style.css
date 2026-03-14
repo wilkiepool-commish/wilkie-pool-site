@@ -633,3 +633,22 @@ button {
     border-radius: 10px;
   }
 }
+/* Header Brand Upgrade */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-logo {
+  height: 34px;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  color: #fff;
+}
