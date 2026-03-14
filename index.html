@@ -76,7 +76,7 @@
             id="survivorQuickOpen"
           >
             <span class="action-title">Survivor Pick Submit</span>
-            <span class="action-text">Open the official Survivor submission section</span>
+            <span class="action-text">Jump to Survivor contest details</span>
           </a>
         </div>
       </div>
@@ -111,7 +111,7 @@
           </div>
 
           <p class="survivor-summary">
-            All Survivor Challengers can submit their daily Survivor pick using the entry form before tip off each day of play.
+            All Survivor Challengers can submit their daily Survivor pick using the official entry form before tip off each day of play.
           </p>
 
           <div class="survivor-rules">
@@ -134,30 +134,21 @@
           </div>
 
           <div class="survivor-controls" id="survivorControls">
-            <button
-              type="button"
-              class="button button-accent"
-              id="toggleSurvivorForm"
-            >
-              Open Survivor Submission
-            </button>
+            <div class="survivor-form-panel">
+              <p class="survivor-form-note">
+                Submit your pick using the official Google Form. After submission, you will see a confirmation message:
+                <strong>Your Survivor pick has been submitted.</strong>
+              </p>
 
-            <div class="survivor-form hidden" id="survivorForm">
-              <div class="survivor-form-panel">
-                <p class="survivor-form-note">
-                  Submit your pick using the official Google Form. After submission, you will see a confirmation message:
-                  <strong>Your Survivor pick has been submitted.</strong>
-                </p>
-
-                <a
-                  class="button button-dark"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSc2_vLFs7yIPQMTAEgng_989L5NtjR764n1WJqw_3_Cs3Yq6A/viewform?usp=publish-editor"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Official Survivor Form
-                </a>
-              </div>
+              <a
+                class="button button-dark"
+                id="survivorSubmitButton"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc2_vLFs7yIPQMTAEgng_989L5NtjR764n1WJqw_3_Cs3Yq6A/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener"
+              >
+                Submit Survivor Pick
+              </a>
             </div>
           </div>
         </div>
