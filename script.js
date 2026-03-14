@@ -44,8 +44,6 @@ const survivorSection = document.querySelector(".survivor-section");
 const survivorControls = document.getElementById("survivorControls");
 const survivorStatusBadge = document.getElementById("survivorStatusBadge");
 const survivorStateMessage = document.getElementById("survivorStateMessage");
-const toggleSurvivorForm = document.getElementById("toggleSurvivorForm");
-const survivorForm = document.getElementById("survivorForm");
 const survivorQuickOpen = document.getElementById("survivorQuickOpen");
 
 if (survivorSection && survivorControls && survivorStatusBadge && survivorStateMessage) {
@@ -72,27 +70,10 @@ if (survivorSection && survivorControls && survivorStatusBadge && survivorStateM
   }
 }
 
-if (toggleSurvivorForm && survivorForm) {
-  toggleSurvivorForm.addEventListener("click", () => {
-    survivorForm.classList.toggle("hidden");
-
-    if (survivorForm.classList.contains("hidden")) {
-      toggleSurvivorForm.textContent = "Open Survivor Submission";
-    } else {
-      toggleSurvivorForm.textContent = "Hide Survivor Submission";
-    }
-  });
-}
-
-if (survivorQuickOpen && survivorSection && toggleSurvivorForm && survivorForm) {
+if (survivorQuickOpen && survivorSection) {
   survivorQuickOpen.addEventListener("click", () => {
-    const survivorStatus = survivorSection.dataset.survivorStatus || "pending";
-
-    if (survivorStatus === "open") {
-      setTimeout(() => {
-        survivorForm.classList.remove("hidden");
-        toggleSurvivorForm.textContent = "Hide Survivor Submission";
-      }, 150);
-    }
+    setTimeout(() => {
+      survivorSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   });
 }
