@@ -23,10 +23,12 @@
       <div class="container">
         <p class="eyebrow">March Madness Pool Hub</p>
         <h1>Wilkie March Madness Pool 2026</h1>
-        <p class="subtitle">Official home for bracket entry, payment, survivor picks, and live standings.
+        <p class="subtitle">
+          Official home for bracket entry, payment, survivor picks, and live standings.
           <br>Be sure to check back for updates throughout the Madness.
-          <br><br>Cheers & Good Luck!  
-          <br>- Commish</p>
+          <br><br>Cheers &amp; Good Luck!
+          <br>- Commish
+        </p>
 
         <div class="actions-grid primary-actions">
           <a
@@ -51,13 +53,11 @@
         </div>
 
         <div class="actions-grid secondary-actions">
-  <!-- 
-  
-  PICK 6 STATUS:
-  available | pending | closed
-  Update the class and badge text manually as needed.
-          
-  -->
+          <!--
+            PICK 6 STATUS:
+            available | pending | closed
+            Update class / badge / href manually as needed.
+          -->
           <a
             class="action-card pick6-card pending"
             href="#"
@@ -76,14 +76,13 @@
           </a>
 
           <a
-          class="action-card"
+            class="action-card"
             href="#survivor-section"
             id="survivorQuickOpen"
-            >
+          >
             <span class="action-title">Survivor Pick Submit</span>
-            <span class="action-text">Open the on-page Survivor form</span>
+            <span class="action-text">Open the official Survivor submission section</span>
           </a>
-          
         </div>
       </div>
     </section>
@@ -98,39 +97,36 @@
           <ul class="announcement-list">
             <li>Entry deadline: Thursday at 12:00 PM</li>
             <li>Payment must be received before first tip</li>
-            <li>Survivor contest rules and deadlines posted here:</li>
+            <li>Survivor contest rules and deadlines posted here</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- 
-    
-    SURVIVOR STATUS:
-    open | closed | pending
-    Change data-survivor-status manually in GitHub as needed.
-    
+    <!--
+      SURVIVOR STATUS:
+      open | closed | pending
+      Change data-survivor-status manually in GitHub as needed.
     -->
-    
-<section
-  class="survivor-section"
-  id="survivor-section"
-  data-survivor-status="open"
->
-  <div class="container">
-    <div class="section-card">
-      <div class="section-heading">
-        <h2>Daily Survivor Contest</h2>
-        <span class="badge" id="survivorStatusBadge">Open Now</span>
-      </div>
+    <section
+      class="survivor-section"
+      id="survivor-section"
+      data-survivor-status="open"
+    >
+      <div class="container">
+        <div class="section-card">
+          <div class="section-heading">
+            <h2>Daily Survivor Contest</h2>
+            <span class="badge" id="survivorStatusBadge">Open Now</span>
+          </div>
 
-      <p class="survivor-summary">
-        All Survivor Challengers can submit their daily Survivor pick using the entry form before tip off each day of play.
-      </p>
+          <p class="survivor-summary">
+            All Survivor Challengers can submit their daily Survivor pick using the entry form before tip off each day of play.
+          </p>
 
-      <div class="survivor-rules">
-        <p><strong>Survivor Challenge Rules:</strong></p>
-        <ul>
+          <div class="survivor-rules">
+            <p><strong>Survivor Challenge Rules:</strong></p>
+            <ul>
               <li>Up to two entries max per member.</li>
               <li>Pick <strong>One team each day</strong> of tournament play.</li>
               <li>Only teams playing <strong>that day</strong> can be picked.</li>
@@ -139,12 +135,12 @@
               <li>No pick = immediate loss.</li>
               <li>If your team wins, you advance. If not, you are eliminated.</li>
               <li>Tiebreaker: total seed points across picks days 1–10.</li>
-              <li>If you didn’t join last year, don’t miss your chance to play & win this year!</li>
+              <li>If you didn’t join last year, don’t miss your chance to play &amp; win this year!</li>
             </ul>
           </div>
 
           <div class="survivor-state-message" id="survivorStateMessage">
-            Today’s Survivor submission window is not open yet. Check back before tip-off, or submit via email.
+            Submit your Survivor pick before the first game tips off today.
           </div>
 
           <div class="survivor-controls" id="survivorControls">
@@ -156,38 +152,23 @@
               Open Survivor Submission
             </button>
 
-            <form
-              class="survivor-form hidden"
-              id="survivorForm"
-              name="survivor-submission"
-              method="POST"
+            <div class="survivor-form hidden" id="survivorForm">
+              <div class="survivor-form-panel">
+                <p class="survivor-form-note">
+                  Submit your pick using the official Google Form. After submission, you will see a confirmation message:
+                  <strong>Your Survivor pick has been submitted.</strong>
+                </p>
 
-              <div class="form-grid">
-                <div class="form-field">
-                  <label for="survivorName">Name</label>
-                  <input
-                    type="text"
-                    id="survivorName"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
-
-                <div class="form-field">
-                  <label for="survivorPick">Pick</label>
-                  <input
-                    type="text"
-                    id="survivorPick"
-                    name="pick"
-                    placeholder="Enter today’s team pick"
-                    required
-                  />
-                </div>
+                <a
+                  class="button button-dark"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc2_vLFs7yIPQMTAEgng_989L5NtjR764n1WJqw_3_Cs3Yq6A/viewform?usp=publish-editor"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Open Official Survivor Form
+                </a>
               </div>
-
-              <button type="submit" class="button button-dark">Submit Pick</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
