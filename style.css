@@ -102,7 +102,9 @@ button {
 }
 
 .hero h1,
-.page-intro h1 {
+.page-intro 
+
+h1 {
   margin: 6px 0 10px;
   font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.05;
@@ -110,12 +112,12 @@ button {
 }
 
 .eyebrow {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.75rem;
-  color: var(--accent-dark);
+  font-size: 14px;
   font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #3c5a8a;
+  margin-bottom: 6px;
 }
 
 .subtitle {
