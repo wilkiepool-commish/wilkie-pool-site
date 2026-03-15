@@ -1004,3 +1004,18 @@ button {
   border-left: 6px solid #214573;
 }
 
+/* Center the middle secondary card (Email Commish only) */
+
+.secondary-actions .action-card:nth-child(2) {
+  text-align: center;
+}
+
+.secondary-actions .action-card:nth-child(2) .action-card-top {
+  justify-content: center;
+}
+
+.secondary-actions .action-card:nth-child(2) .action-title,
+.secondary-actions .action-card:nth-child(2) .action-text {
+  text-align: center;
+}
+
