@@ -392,6 +392,7 @@ button {
   color: var(--muted);
 }
 
+
 .hidden {
   display: none !important;
 }
@@ -519,6 +520,7 @@ button {
   justify-content: flex-end;
   margin-top: 10px;
 }
+
 
 /* Standings Page Sizing */
 .standings-stack {
@@ -933,5 +935,72 @@ button {
 .preview-card .image-button:hover::after {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Left-align only the secondary action cards */
+
+.secondary-actions .action-card {
+  text-align: left;
+}
+
+.secondary-actions .action-card-top {
+  justify-content: flex-start;
+}
+
+.secondary-actions .action-title,
+.secondary-actions .action-text {
+  text-align: left;
+}
+
+/* =====================================
+   Home Page Alignment Fix (Secondary Actions)
+   ===================================== */
+
+.secondary-actions .action-card {
+  text-align: left;
+}
+
+.secondary-actions .action-card-top {
+  justify-content: flex-start;
+}
+
+.secondary-actions .action-title,
+.secondary-actions .action-text {
+  text-align: left;
+}
+
+
+/* =====================================
+   Accent Colors for Key Cards
+   ===================================== */
+
+/* Survivor Contest Card */
+.survivor-card {
+  border-left: 6px solid #0f2747;
+}
+
+/* Sweet 16 Reset Card */
+.sweet16-card {
+  border-left: 6px solid #1f7a45;
+}
+
+
+/* =====================================
+   Standings Preview Accent Bars
+   ===================================== */
+
+/* Pick6 Standings */
+.preview-pick6 {
+  border-left: 6px solid #c42e2e;
+}
+
+/* Survivor Standings */
+.preview-survivor {
+  border-left: 6px solid #d9a323;
+}
+
+/* Sweet16 Reset Standings */
+.preview-sweet16 {
+  border-left: 6px solid #214573;
 }
 
