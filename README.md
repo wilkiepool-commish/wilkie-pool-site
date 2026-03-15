@@ -1,11 +1,11 @@
-# Wilkie Pool Site
+# Wilkie Pool Club Hub
 
-Official website for the Wilkie March Madness Pool.
+Official website for the annual Wilkie March Madness Pool.
 
 This site will be a mobile-first static website used for:
 - pool announcements
 - bracket and payment links
-- Daily Survivor access
+- Survivor challenge submissions
 - live standings snapshots
 
 Primary contact:
