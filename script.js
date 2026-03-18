@@ -65,7 +65,7 @@ function applySurvivorStatus(status) {
 
     if (survivorCardText) {
       survivorCardText.textContent =
-        "Submission is live. Jump to the Survivor section and submit your pick.";
+        "Survivor is open now. Jump in and make your pick.";
     }
   } else if (status === "closed") {
     survivorStatusBadge.textContent = "Closed for Today";
