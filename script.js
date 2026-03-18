@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (survivorCardText) {
         survivorCardText.textContent =
-          "Submission is live. Jump to the Survivor section and submit your pick.";
+          "Survivor is now open. Lock in your pick for day 1 and let’s ride.";
       }
     } else if (status === "closed") {
       survivorStatusBadge.textContent = "Closed for Today";
