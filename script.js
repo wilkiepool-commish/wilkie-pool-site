@@ -78,10 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
         "Today’s submission window has ended. Picks are now locked.";
       survivorControls.classList.add("hidden");
 
+
       if (survivorCardBadge) {
         survivorCardBadge.textContent = "Closed";
         survivorCardBadge.className = "status-badge closed";
       }
+
+    if (survivorCardText) {
+      survivorCardText.textContent =
+        "Survivor is open now. Lock in your pick and let's ride.";
+    }
+  } else if (status === "closed") {
+    survivorStatusBadge.textContent = "Closed for Today";
+    survivorStatusBadge.className = "badge badge-closed";
+    survivorStateMessage.textContent =
+      "Today’s submission window has ended. Picks are now locked.";
+    survivorControls.classList.add("hidden");
+
 
       if (survivorCardText) {
         survivorCardText.textContent =
