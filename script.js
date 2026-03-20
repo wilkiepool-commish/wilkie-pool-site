@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const src = button.getAttribute("data-full");
       const alt = button.getAttribute("data-alt") || "Expanded image";
 
-      if (lightboxImage && lightbox) {
+      if (lightbox && lightboxImage) {
         lightboxImage.src = src;
         lightboxImage.alt = alt;
         lightbox.classList.add("open");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (survivorCardText) {
         survivorCardText.textContent =
-          "Survivor is now open. Lock in your pick for day 1 and let’s ride.";
+          "Survivor is now open. Lock in your pick for the day and let’s ride.";
       }
     } else if (status === "closed") {
       survivorStatusBadge.textContent = "Closed for Today";
@@ -78,27 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "Today’s submission window has ended. Picks are now locked.";
       survivorControls.classList.add("hidden");
 
-
       if (survivorCardBadge) {
         survivorCardBadge.textContent = "Closed";
         survivorCardBadge.className = "status-badge closed";
       }
 
-    if (survivorCardText) {
-      survivorCardText.textContent =
-        "Survivor is open now. Lock in your pick and let's ride.";
-    }
-  } else if (status === "closed") {
-    survivorStatusBadge.textContent = "Closed for Today";
-    survivorStatusBadge.className = "badge badge-closed";
-    survivorStateMessage.textContent =
-      "Today’s submission window has ended. Picks are now locked.";
-    survivorControls.classList.add("hidden");
-
-
       if (survivorCardText) {
         survivorCardText.textContent =
-          "Today’s Survivor submission window has ended. View rules and status here.";
+          "Today’s submission window has ended. Picks are now locked.";
       }
     } else {
       survivorStatusBadge.textContent = "Opens Soon";
