@@ -387,7 +387,8 @@ button {
   border-top: 1px solid var(--border);
 }
 
-.survivor-form-note {
+.survivor-form-note,
+.sweet16-form-note{
   margin: 0 0 14px;
   color: var(--muted);
 }
