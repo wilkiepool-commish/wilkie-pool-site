@@ -368,7 +368,8 @@ button {
   margin-top: 6px;
 }
 
-.survivor-state-message {
+.survivor-state-message,
+.sweet16-state-message {
   margin: 0 0 14px;
   padding: 12px 14px;
   border-radius: 14px;
