@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sweet16StatusBadge.textContent = "Open Now";
       sweet16StatusBadge.className = "badge badge-open";
       sweet16StateMessage.textContent =
-        "Sweet 16 Reset is now open. Reset your bracket and jump back into the action.";
+        "Reset your busted bracket for another chance to win when the Sweet 16 begins.";
       sweet16Controls.classList.remove("hidden");
     } else if (status === "closed") {
       sweet16StatusBadge.textContent = "Closed";
