@@ -28,9 +28,9 @@
   <main>
     <section class="hero compact-hero">
       <div class="container">
-       <div class="hero-banner-wrap">
-  <img src="assets/logo/wilkie-banner.png" alt="Wilkie Pool March Madness Banner" class="hero-banner">
-</div>
+        <div class="hero-banner-wrap">
+          <img src="assets/logo/wilkie-banner.png" alt="Wilkie Pool March Madness Banner" class="hero-banner">
+        </div>
 
         <p class="eyebrow">March Madness Club Hub</p>
         <h1>Wilkie March Madness Pool 2026</h1>
@@ -64,11 +64,11 @@
         </div>
 
         <div class="actions-grid secondary-actions">
-           <a
-              class="action-card pick6-card pending"
-              href="#"
-              aria-disabled="true"
-            >
+          <a
+            class="action-card pick6-card pending"
+            href="#"
+            aria-disabled="true"
+          >
             <div class="action-card-top">
               <span class="action-title">Pick 6 Download</span>
               <span class="status-badge pending">Closed</span>
@@ -119,7 +119,7 @@
       data-survivor-status="open"
     >
       <div class="container">
-       <div class="section-card survivor-card">
+        <div class="section-card survivor-card">
           <div class="section-heading">
             <h2>Survivor Contest</h2>
             <span class="badge" id="survivorStatusBadge">Open Now</span>
@@ -171,12 +171,16 @@
       </div>
     </section>
 
-    <section class="sweet16-section" id="sweet16-section">
+    <section
+      class="sweet16-section"
+      id="sweet16-section"
+      data-sweet16-status="open"
+    >
       <div class="container">
         <div class="section-card sweet16-card">
           <div class="section-heading">
             <h2>Sweet 16 Reset</h2>
-            <span class="badge">Opens Round of 16</span>
+            <span class="badge" id="sweet16StatusBadge">Open Now</span>
           </div>
 
           <p class="survivor-summary">
@@ -202,6 +206,28 @@
               <li>The tie-breaker is the combined number of points scored in the Championship game. Each member must enter a tie-break value when they make their picks.</li>
               <li>The winner is the entry with the most points at the end of the NCAA Tournament.</li>
             </ul>
+          </div>
+
+          <div class="survivor-state-message" id="sweet16StateMessage">
+            Reset your busted bracket for another chance to win when the Sweet 16 begins.
+          </div>
+
+          <div class="survivor-controls" id="sweet16Controls">
+            <div class="survivor-form-panel">
+              <p class="survivor-form-note">
+                Submit your Sweet 16 Reset entry using the official Google Form. After submission, Google will confirm that your entry has been received.
+              </p>
+
+              <a
+                class="button button-dark"
+                id="sweet16SubmitButton"
+                href="https://forms.gle/3KtsMVgzmpPWtNMp7"
+                target="_blank"
+                rel="noopener"
+              >
+                Submit Sweet 16 Reset Entry
+              </a>
+            </div>
           </div>
         </div>
       </div>
