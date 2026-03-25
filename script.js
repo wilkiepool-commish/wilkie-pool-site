@@ -52,6 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const survivorCardBadge = document.getElementById("survivorCardBadge");
   const survivorCardText = document.getElementById("survivorCardText");
 
+  const sweet16Section = document.querySelector(".sweet16-section");
+  const sweet16Controls = document.getElementById("sweet16Controls");
+  const sweet16StatusBadge = document.getElementById("sweet16StatusBadge");
+  const sweet16StateMessage = document.getElementById("sweet16StateMessage");
+
   function applySurvivorStatus(status) {
     if (!survivorControls || !survivorStatusBadge || !survivorStateMessage) return;
 
@@ -106,12 +111,44 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function applySweet16Status(status) {
+    if (!sweet16Controls || !sweet16StatusBadge || !sweet16StateMessage) return;
+
+    if (status === "open") {
+      sweet16StatusBadge.textContent = "Open Now";
+      sweet16StatusBadge.className = "badge badge-open";
+      sweet16StateMessage.textContent =
+        "Sweet 16 Reset is now open. Reset your bracket and jump back into the action.";
+      sweet16Controls.classList.remove("hidden");
+    } else if (status === "closed") {
+      sweet16StatusBadge.textContent = "Closed";
+      sweet16StatusBadge.className = "badge badge-closed";
+      sweet16StateMessage.textContent =
+        "Sweet 16 Reset entries are now closed.";
+      sweet16Controls.classList.add("hidden");
+    } else {
+      sweet16StatusBadge.textContent = "Opens Round of 16";
+      sweet16StatusBadge.className = "badge badge-pending";
+      sweet16StateMessage.textContent =
+        "Sweet 16 Reset opens when the tournament reaches the Round of 16.";
+      sweet16Controls.classList.add("hidden");
+    }
+  }
+
   if (survivorSection) {
     const survivorStatus = (survivorSection.dataset.survivorStatus || "pending")
       .trim()
       .toLowerCase();
 
     applySurvivorStatus(survivorStatus);
+  }
+
+  if (sweet16Section) {
+    const sweet16Status = (sweet16Section.dataset.sweet16Status || "pending")
+      .trim()
+      .toLowerCase();
+
+    applySweet16Status(sweet16Status);
   }
 
   if (survivorQuickOpen && survivorSection) {
