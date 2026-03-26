@@ -28,9 +28,9 @@
   <main>
     <section class="hero compact-hero">
       <div class="container">
-       <div class="hero-banner-wrap">
-  <img src="assets/logo/wilkie-banner.png" alt="Wilkie Pool March Madness Banner" class="hero-banner">
-</div>
+        <div class="hero-banner-wrap">
+          <img src="assets/logo/wilkie-banner.png" alt="Wilkie Pool March Madness Banner" class="hero-banner">
+        </div>
 
         <p class="eyebrow">March Madness Club Hub</p>
         <h1>Wilkie March Madness Pool 2026</h1>
@@ -64,11 +64,11 @@
         </div>
 
         <div class="actions-grid secondary-actions">
-           <a
-              class="action-card pick6-card pending"
-              href="#"
-              aria-disabled="true"
-            >
+          <a
+            class="action-card pick6-card pending"
+            href="#"
+            aria-disabled="true"
+          >
             <div class="action-card-top">
               <span class="action-title">Pick 6 Download</span>
               <span class="status-badge pending">Closed</span>
@@ -119,14 +119,14 @@
       data-survivor-status="open"
     >
       <div class="container">
-       <div class="section-card survivor-card">
+        <div class="section-card survivor-card">
           <div class="section-heading">
             <h2>Survivor Contest</h2>
             <span class="badge" id="survivorStatusBadge">Open Now</span>
           </div>
 
           <p class="survivor-summary">
-            Survivor is a side pool challenge that begins <b>Day 1</b> of the tournament.
+            Survivor is a side pool challenge that begins <b>Day 1</b> of the tournament and runs until a champion is crowned.
             <br>All Survivor Challengers can submit their Survivor pick the day of using the official entry form below. Remember to make your picks before tip off each day of play.<br>
           </p>
 
@@ -152,7 +152,7 @@
           <div class="survivor-controls" id="survivorControls">
             <div class="survivor-form-panel">
               <p class="survivor-form-note">
-                Submit your pick using the official Google Form. After submission, you will see a confirmation message:
+                Submit your picks using the official Google Form. After submission, you will see a confirmation message:
                 <strong>"Your Survivor pick has been submitted."</strong>
               </p>
 
@@ -171,24 +171,28 @@
       </div>
     </section>
 
-    <section class="sweet16-section" id="sweet16-section">
+    <section
+      class="sweet16-section"
+      id="sweet16-section"
+      data-sweet16-status="open"
+    >
       <div class="container">
         <div class="section-card sweet16-card">
           <div class="section-heading">
             <h2>Sweet 16 Reset</h2>
-            <span class="badge">Opens Round of 16</span>
+            <span class="badge" id="sweet16StatusBadge">Open Now</span>
           </div>
 
-          <p class="survivor-summary">
-            Sweet 16 Reset is a side pool challenge that begins at the <b>Round of 16</b> during the tournament.
+          <p class="sweet16-summary">
+            Sweet 16 Reset is a side pool challenge that begins at the <b>Round of 16</b> during the tournament, running through the championship game.
           </p>
 
-          <div class="survivor-rules">
+          <div class="sweet16-rules">
             <p><strong>Sweet 16 Rules:</strong></p>
             <ul>
-              <li>Members pick 15 games of the NCAA Tournament, starting with the Sweet 16 round.</li>
-              <li>The pick deadline is set to <strong>March 26, 2026 at 6:59 PM ET - PRIOR TO FIRST TIP-OFF</strong>.</li>
-              <li>Each participant is limited to a <strong><u>single</u> entry ($15)</strong> in the contest.</li>
+              <li>Reset your busted brackets. Entrants pick the remaining 15 games of the NCAA Tournament, starting with the Round of 16.</li>
+              <li>The pick deadline is set to <strong>March 26, 2026 at 6:59 PM ET - Prior to first tip-off</strong>.</li>
+              <li>Each entrant is limited to a <strong><u>single</u> entry ($15)</strong> in the contest.</li>
               <li>Points are awarded for each correct pick.</li>
               <li>Points values increase as the tournament progresses, as follows:
                 <ul>
@@ -202,6 +206,29 @@
               <li>The tie-breaker is the combined number of points scored in the Championship game. Each member must enter a tie-break value when they make their picks.</li>
               <li>The winner is the entry with the most points at the end of the NCAA Tournament.</li>
             </ul>
+          </div>
+
+          <div class="sweet16-state-message" id="sweet16StateMessage">
+            Reset your busted bracket for another shot at the top when the Sweet 16 tips off.
+          </div>
+
+          <div class="sweet16-controls" id="sweet16Controls">
+            <div class="sweet16-form-panel">
+              <p class="sweet16-form-note">
+                Submit your picks using the official Google Form. After submission, you will see a confirmation message:
+                <strong>"Your Sweet 16 picks have been submitted."</strong>
+              </p>
+
+              <a
+                class="button button-dark"
+                id="sweet16SubmitButton"
+                href="https://forms.gle/3KtsMVgzmpPWtNMp7"
+                target="_blank"
+                rel="noopener"
+              >
+                Submit Sweet 16 Reset Entry
+              </a>
+            </div>
           </div>
         </div>
       </div>
